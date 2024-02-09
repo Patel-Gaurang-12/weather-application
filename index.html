@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiWather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video src="/Img/Pexels Videos 2782.mp4" id="background-video" autoplay loop muted></video>
+    <section>
+        <div class="container">
+            <img src="/Img/Bgremoved.png" alt="">
+            <div class="input-container">
+                <input type="text" placeholder="Enter any city name.." class="input" id="input">
+            </div>
+            <div class="sud">
+                <ul id="suggestions"></ul>
+            </div>
+            <h3 id="required">*This place was required</h3>
+            <input type="button" value="Get Celsius" id="get-btn" onclick="buttenClick()">
+        </div>
+        <!-- second page -->
+        <div class="container-second" id="container">
+            <div class="location">
+                <p id="app-country"></p>
+                <p id="app-region"></p>
+                <p id="app-city"></p>
+            </div>
+            <div class="weather even">
+                <div class="temp">
+                    <p class="weather-box">Temperature</p>
+                    <p id="app-temp" class="value"></p>
+                </div>
+                <div class="temp">
+                    <p class="weather-box">humidity</p>
+                    <p id="app-humi" class="value"></p>
+                </div>
+                <div class="temp">
+                    <p class="weather-box">pressure</p>
+                    <p id="app-pre" class="value"></p>
+                </div>
+            </div>
+            <div class="sun-status even">
+                <div class="temp">
+                    <p class="weather-box">Sunrise</p>
+                    <p id="app-rise"></p>
+                </div>
+                <div class="temp">
+                    <p class="weather-box">Sunset</p>
+                    <p id="app-set"></p>
+                </div>
+            </div>
+            <div class="wind even">
+                <div class="temp">
+                    <p class="weather-box">Wind Direction</p>
+                    <p id="app-direction"></p>
+                </div>
+                <div class="temp">
+                    <p class="weather-box">Wind Speed</p>
+                    <p id="app-speed"></p>
+                </div>
+            </div>
+            <div class="graph">
+                <canvas id="myChart" width="300" height="150"></canvas>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="/main.js"></script>
+</body>
+
+</html>
